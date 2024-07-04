@@ -7,14 +7,14 @@
  *
  * Plugin Name: Wordpress ReCaptcha
  * Description: A WordPress plugin for integrating Google reCAPTCHA on Login and Comment Forms.
- * Version: 1.0
+ * Version: 1.1
  * Text Domain: wordpress-recaptcha
  * Author: Atlas Gondal
  * Author URI: https://AtlasGondal.com/
  *
  * @author    Atlas Gondal <Contact@AtlasGondal.com>
  * @copyright 2024 Atlas Gondal
- * @version   v.1.0 (21/02/24)
+ * @version   v.1.1 (04/07/24)
  */
 
 if (!defined('ABSPATH')) {
