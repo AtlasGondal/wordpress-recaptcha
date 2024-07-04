@@ -24,8 +24,22 @@ class GoogleReCaptcha
 
             add_filter('comment_form_defaults', [$this, 'add_google_recaptcha']);
             add_action('pre_comment_on_post', [$this, 'verify_google_recaptcha']);
+            
+          	add_filter('get_comment_author_link', [$this, 'remove_comment_author_url']);
         }
 
+    }
+
+    # enqueue scripts is not used to avoid adding on all unnecessary pages
+    public function add_recaptcha_scripts() {
+        echo '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
+        echo '<style>
+            .g-recaptcha {
+                margin-bottom: 20px;
+                transform: scale(0.89);
+                transform-origin: 0 0;
+            }
+          </style>';
     }
 
 
@@ -37,14 +51,7 @@ class GoogleReCaptcha
         $recaptcha_html = '<div class="g-recaptcha" data-sitekey="' . $site_key . '"></div>';
         echo $recaptcha_html;
         // Script to load the reCAPTCHA JavaScript API
-        echo '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
-        echo '<style>
-            .g-recaptcha {
-                margin-bottom: 20px;
-                transform: scale(0.89);
-                transform-origin: 0 0;
-            }
-          </style>';
+        $this->add_recaptcha_scripts();
     }
 
     // Method to validate CAPTCHA on login
@@ -70,6 +77,8 @@ class GoogleReCaptcha
     {
         $site_key = $this->site_key;
         $recaptcha_html = '<div class="g-recaptcha" data-sitekey="' . $site_key . '"></div>';
+        // Script to load the reCAPTCHA JavaScript API
+        $this->add_recaptcha_scripts();
         $submit_field['submit_field'] = $recaptcha_html . $submit_field['submit_field'];
         return $submit_field;
     }
@@ -107,6 +116,12 @@ class GoogleReCaptcha
             exit;
         }
         return $comment_data;
+    }
+
+    public function remove_comment_author_url($author_link) {
+        $comment = get_comment();
+        $author = get_comment_author($comment);
+        return $author;
     }
 }
 
