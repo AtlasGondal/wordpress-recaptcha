@@ -7,14 +7,14 @@
  *
  * Plugin Name: Wordpress Recaptcha
  * Description: Simple. Secure. Lightweight reCAPTCHA protection for your WordPress site.
- * Version: 1.1
+ * Version: 2.0
  * Text Domain: wordpress-recaptcha
  * Author: Atlas Gondal
  * Author URI: https://AtlasGondal.com/
  *
  * @author    Atlas Gondal <Contact@AtlasGondal.com>
  * @copyright 2024 Atlas Gondal
- * @version   v.1.1 (21/02/24)
+ * @version   v.2.0 (26/04/25)
  */
 
 if (!defined('ABSPATH')) {
