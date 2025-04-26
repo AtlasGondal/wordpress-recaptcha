@@ -1,0 +1,101 @@
+/* Background for full admin area */
+body.wp-admin {
+    background: #f0f2f5;
+}
+
+/* Heading */
+#wpbody h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Settings page container */
+.wrap.wp-recaptcha-settings {
+    background: #f0f2f5;
+    padding: 30px 20px;
+}
+
+/* Layout */
+.settings-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Main form card */
+.settings-main {
+    flex: 4;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar card */
+.settings-sidebar {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar heading */
+.settings-sidebar h3 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Sidebar list */
+.settings-sidebar ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.settings-sidebar ul li {
+    margin-bottom: 6px;
+	list-style: disclosure-closed;
+}
+
+/* Footer inside sidebar */
+.sidebar-footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Form table */
+.form-table th {
+    text-align: left;
+    padding: 15px 10px 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-table td {
+    padding: 10px 0;
+}
+
+/* Inputs */
+.form-table input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccd0d4;
+    border-radius: 6px;
+    background: #fff;
+}
+
+/* Field descriptions */
+.description {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #555;
+}
+
