@@ -149,7 +149,7 @@ class WP_ReCaptcha {
 					</ul>
 
 					<p class="sidebar-footer">
-						Developed by: <strong><a href="href="https://AtlasGondal.com/?utm_source=self&utm_medium=wp&utm_campaign=wordpress-recaptcha&utm_term=developed-by">Atlas Gondal</a></strong>
+						Developed by: <strong><a href="https://AtlasGondal.com/?utm_source=self&utm_medium=wp&utm_campaign=wordpress-recaptcha&utm_term=developed-by">Atlas Gondal</a></strong>
 					</p>
 				</div>
 
