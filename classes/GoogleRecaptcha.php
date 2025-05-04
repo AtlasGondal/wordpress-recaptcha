@@ -14,6 +14,10 @@ class GoogleReCaptcha
         $this->secret_key = $secret_key;
 
         if (!is_user_logged_in()) {
+
+	    // Ensure reCAPTCHA script loads correctly on wp-login.php
+            add_action('login_enqueue_scripts', [$this, 'enqueue_recaptcha_script']);
+		
             add_action('login_form', [$this, 'add_login_recaptcha']);
             add_filter('wp_authenticate_user', [$this, 'validate_login_recaptcha'], 10, 2);
 
